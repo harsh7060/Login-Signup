@@ -79,6 +79,8 @@
         android:textSize="20dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/btn_login"
         app:layout_constraintTop_toTopOf="@+id/btn_login"
         app:layout_constraintVertical_bias="0.0" />
 
@@ -95,6 +97,8 @@
         android:textColor="@color/white"
         android:textSize="20dp"
         app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/btn_signup"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
@@ -114,16 +118,39 @@
         android:id="@+id/btn_google"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="30dp"
         android:layout_marginBottom="80dp"
-        android:background="@color/white"
+        android:background="@drawable/auth_btn_bg"
         android:drawableStart="@drawable/google_ic"
         android:drawablePadding="3dp"
         android:padding="5dp"
         android:text="@string/google"
+        android:elevation="5dp"
+        android:fontFamily="@font/kurale"
         android:textAllCaps="false"
-        android:textSize="17sp"
+        android:textSize="20sp"
         app:layout_constraintBottom_toTopOf="@+id/btn_login"
-        app:layout_constraintStart_toStartOf="@+id/btn_login" />
+        app:layout_constraintEnd_toStartOf="@+id/btn_phone"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btn_phone"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:background="@drawable/auth_btn_bg"
+        android:drawableStart="@drawable/phone_ic"
+        android:drawablePadding="3dp"
+        android:fontFamily="@font/kurale"
+        android:paddingStart="5dp"
+        android:paddingEnd="5dp"
+        android:text="@string/phone"
+        android:textAllCaps="false"
+        android:textSize="20sp"
+        android:elevation="5dp"
+        app:layout_constraintBottom_toBottomOf="@+id/btn_google"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/btn_google"
+        app:layout_constraintTop_toTopOf="@+id/btn_google" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

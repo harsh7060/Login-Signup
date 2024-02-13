@@ -16,4 +16,5 @@
     <string name="add_note">Add Note</string>
     <string name="enter_your_description">Enter Your Description</string>
     <string name="enter_your_title">Enter Your Title</string>
+    <string name="phone">Phone</string>
 </resources>

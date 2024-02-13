@@ -1,6 +1,7 @@
 {
   "project_info": {
     "project_number": "18334617364",
+    "firebase_url": "https://login-and-sign-up-797bb-default-rtdb.firebaseio.com",
     "project_id": "login-and-sign-up-797bb",
     "storage_bucket": "login-and-sign-up-797bb.appspot.com"
   },
@@ -12,7 +13,20 @@
           "package_name": "com.example.loginsignup"
         }
       },
-      "oauth_client": [],
+      "oauth_client": [
+        {
+          "client_id": "18334617364-43tl85osteee6j7ohjqfl6hs8u5a0u25.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.loginsignup",
+            "certificate_hash": "fc762f1881fa168e76bd57e24f9c04a24d5f227d"
+          }
+        },
+        {
+          "client_id": "18334617364-su373ik90lu5a5crcnhqg1373p3jbsnk.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
       "api_key": [
         {
           "current_key": "AIzaSyDT2zIOCQRM67_JT0VQHtPR-2ncf5qtMY0"
@@ -20,7 +34,12 @@
       ],
       "services": {
         "appinvite_service": {
-          "other_platform_oauth_client": []
+          "other_platform_oauth_client": [
+            {
+              "client_id": "18334617364-su373ik90lu5a5crcnhqg1373p3jbsnk.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
         }
       }
     }

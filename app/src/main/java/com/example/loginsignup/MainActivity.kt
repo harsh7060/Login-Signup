@@ -48,6 +48,11 @@ class MainActivity : AppCompatActivity() {
             launcher.launch(signInIntent)
         }
 
+        binding.btnPhone.setOnClickListener{
+            startActivity(Intent(this,PhoneActivity::class.java))
+            finish()
+        }
+
         binding.btnSignup.setOnClickListener{
             val intent = Intent(this,Sign_up_activity::class.java)
             startActivity(intent)

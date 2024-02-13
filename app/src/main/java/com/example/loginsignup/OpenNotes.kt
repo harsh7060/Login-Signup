@@ -23,7 +23,6 @@ class OpenNotes : AppCompatActivity(), NoteAdapter.OnItemClickListener {
     private lateinit var databaseReference: DatabaseReference
     private lateinit var auth: FirebaseAuth
     private lateinit var recyclerView: RecyclerView
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(binding.root)
