@@ -24,6 +24,8 @@ class Home_Screen : AppCompatActivity() {
     private lateinit var tvName: TextView
     private lateinit var tvEmail: TextView
     private lateinit var ivPhoto: ImageView
+    private lateinit var intentName: String
+    private lateinit var intentEmail: String
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -35,10 +37,7 @@ class Home_Screen : AppCompatActivity() {
             .build()
         var googleSignInClient = GoogleSignIn.getClient(this, gso)
 
-        auth = FirebaseAuth.getInstance()
-        tvEmail = binding.tvShowEmail
-        tvName = binding.tvName
-        ivPhoto = binding.ivPhoto
+        init()
 
         binding.btnSignout.setOnClickListener {
             googleSignInClient.signOut().addOnCompleteListener(this) {
@@ -59,6 +58,14 @@ class Home_Screen : AppCompatActivity() {
         binding.btnOpenNotes.setOnClickListener {
             startActivity(Intent(this, OpenNotes::class.java))
         }
+
+        binding.btnImage.setOnClickListener{
+            startActivity(Intent(this,PhotoUpload::class.java))
+        }
+
+        binding.btnVideo.setOnClickListener{
+            startActivity(Intent(this,VideoActivity::class.java))
+        }
     }
 
     override fun onStart() {
@@ -66,6 +73,10 @@ class Home_Screen : AppCompatActivity() {
         val account = GoogleSignIn.getLastSignedInAccount(this)
         if(account!=null){
             updateUI(account)
+        }else{
+            Toast.makeText(this,"hi",Toast.LENGTH_SHORT).show()
+            tvName.text = intentName
+            tvEmail.text = intentEmail
         }
     }
 
@@ -76,6 +87,15 @@ class Home_Screen : AppCompatActivity() {
         Glide.with(this)
             .load(account.photoUrl)
             .into(ivPhoto)
+    }
+
+    private fun init(){
+        auth = FirebaseAuth.getInstance()
+        tvEmail = binding.tvShowEmail
+        tvName = binding.tvName
+        ivPhoto = binding.ivPhoto
+        intentName = intent.getStringExtra("name").toString()
+        intentEmail = intent.getStringExtra("email").toString()
     }
 
 
